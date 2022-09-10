@@ -2,9 +2,12 @@ import { MantineThemeOverride } from '@mantine/core';
 
 const theme: MantineThemeOverride = {
   colors: {
-    darkBlue: ['hsl(209, 23%, 22%)', 'hsl(207, 26%, 17%)', 'hsl(200, 15%, 8%)'],
-    darkGray: ['hsl(0, 0%, 52%)'],
-    veryLightGray: ['hsl(0, 0%, 98%)'],
+    cyan: ['hsl(180, 66%, 49%)'],
+    veryDarkBlue: ['hsl(255, 11%, 22%)'],
+    gray: ['hsl(0, 0%, 75%)'],
+    red: ['hsl(0, 87%, 67%)'],
+    // (Dark, Grayish, Very Dark) Violet
+    violet: ['hsl(257, 27%, 26%)', 'hsl(257, 7%, 63%)', 'hsl(260, 8%, 14%)'],
   },
   fontFamily: "'Nunito Sans', sans-serif",
 };
