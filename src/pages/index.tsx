@@ -1,11 +1,14 @@
-const HomePage = () => {
-  const a = '';
+import { Stack } from '@mantine/core';
+import { AdvancedStatistics, Cover, BoostYourLinksToday, Footer, Header } from 'components/home';
 
-  return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
-  );
-};
+const HomePage = () => (
+  <Stack>
+    <Header />
+    <Cover />
+    <AdvancedStatistics />
+    <BoostYourLinksToday />
+    <Footer />
+  </Stack>
+);
 
 export default HomePage;
