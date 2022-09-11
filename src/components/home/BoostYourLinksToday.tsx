@@ -2,7 +2,7 @@
 import { createStyles, Stack, Title } from '@mantine/core';
 import Button from 'components/Button';
 
-const useBoostYourLinksToday = createStyles(({ colors, spacing }) => ({
+const useStyles = createStyles(({ colors, spacing }) => ({
   container: {
     position: 'relative',
     height: '260px',
@@ -26,7 +26,7 @@ const BoostYourLinksToday = () => {
   const {
     classes,
     theme: { breakpoints },
-  } = useBoostYourLinksToday();
+  } = useStyles();
 
   return (
     <Stack className={classes.container}>

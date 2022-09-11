@@ -2,7 +2,7 @@ import { createStyles, Stack, Text, Title } from '@mantine/core';
 import { IconFacebook, IconInstagram, IconPinterest, IconTwitter } from 'assets/social';
 import { Row } from 'theme/restyled';
 
-const useFooterStyles = createStyles((t) => ({
+const useStyles = createStyles((t) => ({
   container: {
     gap: `${2 * t.spacing.xl}px`,
     padding: `${3 * t.spacing.xl}px`,
@@ -37,7 +37,7 @@ type BlockProps = {
 };
 
 const Block = ({ elements, title }: BlockProps) => {
-  const { classes } = useFooterStyles();
+  const { classes } = useStyles();
 
   return (
     <Stack className={classes.blockContainer}>
@@ -54,10 +54,11 @@ const Block = ({ elements, title }: BlockProps) => {
 };
 
 const Footer = () => {
-  const { classes } = useFooterStyles();
+  const { classes } = useStyles();
 
   return (
     <Stack className={classes.container}>
+      {/* <img src="/mobile-design.jpg" alt="" /> */}
       <Title>Shortly</Title>
       <Block title="Features" elements={['Link Shorting', 'BrandedLinks', 'Analytics']} />
       <Block title="Resources" elements={['Blog', 'Developers', 'Support']} />
