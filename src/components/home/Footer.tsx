@@ -1,4 +1,5 @@
-import { createStyles, Image, Stack, Text, Title } from '@mantine/core';
+import { createStyles, Stack, Text, Title } from '@mantine/core';
+import { IconFacebook, IconInstagram, IconPinterest, IconTwitter } from 'assets/social';
 import { Row } from 'theme/restyled';
 
 const useFooterStyles = createStyles((t) => ({
@@ -12,8 +13,12 @@ const useFooterStyles = createStyles((t) => ({
 
     [t.fn.largerThan('md')]: {},
 
-    '.social:hover': {
-      opacity: 0.1,
+    'svg:hover': {
+      cursor: 'pointer',
+      stroke: t.colors.cyan[0],
+      path: {
+        fill: t.colors.cyan[0],
+      },
     },
   },
   blockContainer: {
@@ -58,9 +63,10 @@ const Footer = () => {
       <Block title="Resources" elements={['Blog', 'Developers', 'Support']} />
       <Block title="Company" elements={['About', 'Our Team', 'Careers', 'Contact']} />
       <Row>
-        {['facebook', 'twitter', 'pinterest', 'instagram'].map((social) => (
-          <Image className="social" src={`/images/icon-${social}.svg`} key={social} />
-        ))}
+        <IconFacebook />
+        <IconInstagram />
+        <IconPinterest />
+        <IconTwitter />
       </Row>
     </Stack>
   );
