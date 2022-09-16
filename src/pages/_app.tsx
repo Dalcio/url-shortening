@@ -1,5 +1,5 @@
 import { MantineProvider, Stack, Text } from '@mantine/core';
-import { useDocumentIsReady } from 'hooks';
+import useDocumentIsReady from 'hooks/useDocumentIsReady';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import theme from 'theme';
