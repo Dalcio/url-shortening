@@ -3,7 +3,7 @@ import React from 'react';
 
 const GlobalStyles = () => (
   <Global
-    styles={({ fn }: MantineTheme) => ({
+    styles={({ fn, spacing }: MantineTheme) => ({
       '*, *::before, *::after': {
         boxSizing: 'border-box',
         margin: 0,
@@ -18,6 +18,17 @@ const GlobalStyles = () => (
         display: 'flex',
         flexDirection: 'column',
         width: 'min(100%, 940px)',
+      },
+
+      '@keyframes slide-left': {
+        from: {
+          right: '-100vw',
+          left: '100vw',
+        },
+        to: {
+          right: `${spacing.xl}px`,
+          left: `${spacing.xl}px`,
+        },
       },
     })}
   />

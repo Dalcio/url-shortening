@@ -8,7 +8,8 @@ const useStyles = createStyles((theme) => ({
     overflowX: 'hidden',
     overflowY: 'auto',
     alignItems: 'center',
-    marginTop: '60px',
+    marginTop: '100px',
+    backgroundColor: theme.white,
   },
   container: {
     minHeight: '100vh',
