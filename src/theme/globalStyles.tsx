@@ -17,7 +17,7 @@ const GlobalStyles = () => (
       '.container, .wrapper': {
         display: 'flex',
         flexDirection: 'column',
-        width: 'min(100%, 120px)',
+        width: 'min(100%, 1240px)',
       },
 
       '@keyframes slide-left': {

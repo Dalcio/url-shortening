@@ -39,8 +39,8 @@ const useStyles = createStyles((theme) => ({
       '&:before': {
         width: 'unset',
         height: '10px',
-        marginTop: 'calc(25% - 5px)',
-        'margin-top': 'calc(25% - 5px)',
+        marginTop: 'calc(16% - 5px)',
+        'margin-top': 'calc(16% - 5px)',
         bottom: 'unset',
         top: 'unset',
         left: '10px',
