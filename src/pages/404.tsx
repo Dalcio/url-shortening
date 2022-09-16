@@ -8,6 +8,7 @@ const useStyles = createStyles((theme) => ({
 
   inner: {
     position: 'relative',
+    top: '25vh',
   },
 
   image: {

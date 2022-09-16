@@ -1,9 +1,17 @@
-import { AdvancedStatistics, Cover, BoostYourLinksToday, Footer, Header } from 'components/home';
+import {
+  AdvancedStatistics,
+  Cover,
+  BoostYourLinksToday,
+  Footer,
+  Header,
+  Shorten,
+} from 'components/home';
 
 const HomePage = () => (
   <>
     <Header />
     <Cover />
+    <Shorten />
     <AdvancedStatistics />
     <BoostYourLinksToday />
     <Footer />
