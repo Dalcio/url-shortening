@@ -10,6 +10,7 @@ export type TStoreState = {
 
 export type TStoreActions = {
   toggleCopiedLink: (idx: number) => string | undefined;
+  shorterLink: (link: TShortedLink) => void;
 };
 
 export type TStore = TStoreState & TStoreActions;

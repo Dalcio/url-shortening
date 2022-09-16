@@ -1,22 +1,13 @@
-import { Card, CardSection, createStyles, Stack, Text } from '@mantine/core';
+import { Card, CardSection, Stack, Text } from '@mantine/core';
 import { TShortedLink } from 'store/store.types';
+
 import Button from '../../Button';
+import { useShortedLinkStyles } from './Shorten.styles';
 
 type ShortedLinkProps = TShortedLink & {
   idx: number;
   onCopy: (idx: number) => void;
 };
-
-const useShortedLinkStyles = createStyles((theme) => ({
-  hr: {
-    borderBottomColor: theme.colors.gray[0],
-    borderWidth: '1px',
-    opacity: 0.6,
-  },
-  shortedLink: {
-    color: theme.colors.cyan[0],
-  },
-}));
 
 const ShortedLink = ({ copied, idx, onCopy, link, shortedLink }: ShortedLinkProps) => {
   const { classes } = useShortedLinkStyles();

@@ -10,7 +10,7 @@ const theme: MantineThemeOverride = {
     // (Dark, Grayish, Very Dark) Violet
     violet: ['hsl(257, 27%, 26%)', 'hsl(257, 7%, 63%)', 'hsl(260, 8%, 14%)'],
   },
-  // fontFamily: "'Nunito Sans', sans-serif",
+  fontFamily: "'Nunito Sans', sans-serif",
 };
 
 export default theme;

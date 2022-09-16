@@ -1,35 +1,14 @@
-import { createStyles, Stack } from '@mantine/core';
+import { Stack } from '@mantine/core';
 import { v4 as uuid } from 'uuid';
 import useStore from 'store';
+
 import ShortedLink from './ShortedLink';
 import ShortenForm from './ShortenForm';
-
-const useStyles = createStyles((theme) => ({
-  container: {
-    width: '100%',
-    backgroundColor: theme.colors.gray[1],
-  },
-  shortedLinks: {
-    width: `calc(100% - ${2 * theme.spacing.xl}px)`,
-  },
-}));
-
-const useShorten = () => {
-  const toggleCopiedLink = useStore((s) => s.toggleCopiedLink);
-
-  const handleCopyLink = (idx: number) => {
-    const linkToCopy = toggleCopiedLink(idx);
-
-    if (navigator && linkToCopy) {
-      navigator.clipboard.writeText(linkToCopy);
-    }
-  };
-
-  return { handleCopyLink };
-};
+import useShortenStyles from './Shorten.styles';
+import useShorten from './Shorten.hooks';
 
 const Shorten = () => {
-  const { classes } = useStyles();
+  const { classes } = useShortenStyles();
   const shortedLinks = useStore((s) => s.shortedLinks);
   const { handleCopyLink } = useShorten();
 

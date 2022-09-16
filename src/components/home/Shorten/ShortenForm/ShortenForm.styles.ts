@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import { createStyles, Input, Stack } from '@mantine/core';
-import Button from 'components/Button';
+import { createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -46,29 +44,15 @@ const useStyles = createStyles((theme) => ({
       },
     },
   },
+  errorInput: {
+    borderColor: theme.colors.red[0],
+    '&::placeholder': {
+      color: theme.colors.red[0],
+    },
+  },
+  errorText: {
+    color: theme.colors.red[0],
+  },
 }));
 
-const ShortenForm = () => {
-  const {
-    classes,
-    theme: { breakpoints },
-  } = useStyles();
-
-  return (
-    <div className={classes.wrapper}>
-      <Stack className={classes.container}>
-        <Input variant="filled" size="xl" placeholder="Shorten a link here..." />
-        <Button label="Shorten It!" radius="md" />
-        <picture>
-          <source
-            media={`(min-width: ${breakpoints.sm}px)`}
-            srcSet="/images/bg-shorten-desktop.svg"
-          />
-          <img src="/images/bg-shorten-mobile.svg" alt="background shorten" />
-        </picture>
-      </Stack>
-    </div>
-  );
-};
-
-export default ShortenForm;
+export default useStyles;
