@@ -14,29 +14,33 @@ const ShortenForm = () => {
 
   return (
     <div className={classes.wrapper}>
-      <Stack className={classes.container}>
-        <Stack>
-          <Input
-            variant="filled"
-            size="xl"
-            placeholder="Shorten a link here..."
-            value={link}
-            onChange={(evt: ChangeEvent<HTMLInputElement>) => handleLink(evt.target.value)}
-            radius="md"
-            classNames={(error && { input: classes.errorInput }) || undefined}
-          />
-          {error && <Text className={classes.errorText}>{error}</Text>}
-        </Stack>
+      <div className="wrapper">
+        <Stack align="center">
+          <Stack className={classes.container}>
+            <Stack>
+              <Input
+                variant="filled"
+                size="xl"
+                placeholder="Shorten a link here..."
+                value={link}
+                onChange={(evt: ChangeEvent<HTMLInputElement>) => handleLink(evt.target.value)}
+                radius="md"
+                classNames={(error && { input: classes.errorInput }) || undefined}
+              />
+              {error && <Text className={classes.errorText}>{error}</Text>}
+            </Stack>
 
-        <Button label="Shorten It!" radius="md" onCLick={onShortenIt} loading={isShorting} />
-        <picture>
-          <source
-            media={`(min-width: ${breakpoints.sm}px)`}
-            srcSet="/images/bg-shorten-desktop.svg"
-          />
-          <img src="/images/bg-shorten-mobile.svg" alt="background shorten" />
-        </picture>
-      </Stack>
+            <Button label="Shorten It!" radius="md" onCLick={onShortenIt} loading={isShorting} />
+            <picture>
+              <source
+                media={`(min-width: ${breakpoints.sm}px)`}
+                srcSet="/images/bg-shorten-desktop.svg"
+              />
+              <img src="/images/bg-shorten-mobile.svg" alt="background shorten" />
+            </picture>
+          </Stack>
+        </Stack>
+      </div>
     </div>
   );
 };

@@ -12,9 +12,11 @@ export const useShortedLinkStyles = createStyles((theme) => ({
 }));
 
 const useShortenStyles = createStyles((theme) => ({
+  wrapper: {
+    backgroundColor: theme.colors.gray[1],
+  },
   container: {
     width: '100%',
-    backgroundColor: theme.colors.gray[1],
   },
   shortedLinks: {
     width: `calc(100% - ${2 * theme.spacing.xl}px)`,

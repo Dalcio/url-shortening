@@ -13,6 +13,12 @@ const GlobalStyles = () => (
         ...fn.fontStyles(),
         fontSize: '18px',
       },
+
+      '.container, .wrapper': {
+        display: 'flex',
+        flexDirection: 'column',
+        width: 'min(100%, 940px)',
+      },
     })}
   />
 );

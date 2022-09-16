@@ -2,9 +2,12 @@ import { createStyles, Stack, Text, Title } from '@mantine/core';
 import AdvancedStatisticsCard from './AdvancedStatisticsCard';
 
 const useStyles = createStyles((theme) => ({
+  wrapper: {
+    backgroundColor: theme.colors.gray[1],
+    alignItems: 'center',
+  },
   container: {
     alignItems: 'center',
-    backgroundColor: theme.colors.gray[1],
     padding: `${3 * theme.spacing.xl}px ${theme.spacing.xl}px`,
   },
   statistics: {
@@ -29,7 +32,6 @@ const useStyles = createStyles((theme) => ({
       },
     },
   },
-  title: {},
   description: {
     textAlign: 'center',
     color: theme.colors.gray[0],
@@ -41,25 +43,30 @@ const AdvancedStatistics = () => {
   const { classes } = useStyles();
 
   return (
-    <Stack className={classes.container} spacing="md">
-      <Title className={classes.title}>Advanced Statistics</Title>
-      <Text className={classes.description}>
-        Track how your links are performing across the web with our advanced statistics dashboard
-      </Text>
-      <Stack className={classes.statistics}>
-        <AdvancedStatisticsCard
-          title="Brand Recognition"
-          description="Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content."
-        />
-        <AdvancedStatisticsCard
-          title="Detailed Records"
-          description="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
-        />
-        <AdvancedStatisticsCard
-          title="Fully Customizable"
-          description="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
-        />
-      </Stack>
+    <Stack className={classes.wrapper}>
+      <div className="wrapper">
+        <Stack className={classes.container} spacing="md">
+          <Title>Advanced Statistics</Title>
+          <Text className={classes.description}>
+            Track how your links are performing across the web with our advanced statistics
+            dashboard
+          </Text>
+          <Stack className={classes.statistics}>
+            <AdvancedStatisticsCard
+              title="Brand Recognition"
+              description="Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instill confidence in your content."
+            />
+            <AdvancedStatisticsCard
+              title="Detailed Records"
+              description="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
+            />
+            <AdvancedStatisticsCard
+              title="Fully Customizable"
+              description="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
+            />
+          </Stack>
+        </Stack>
+      </div>
     </Stack>
   );
 };

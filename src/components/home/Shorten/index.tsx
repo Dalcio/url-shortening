@@ -13,13 +13,17 @@ const Shorten = () => {
   const { handleCopyLink } = useShorten();
 
   return (
-    <Stack align="center" className={classes.container}>
+    <Stack align="center" className={classes.wrapper}>
       <ShortenForm />
-      <Stack className={classes.shortedLinks} mt="md" spacing="xl">
-        {shortedLinks.map((link, idx) => (
-          <ShortedLink {...link} idx={idx} key={uuid()} onCopy={handleCopyLink} />
-        ))}
-      </Stack>
+      <div className="wrapper">
+        <Stack align="center" className={classes.container}>
+          <Stack className={classes.shortedLinks} mt="xl" spacing="xl">
+            {shortedLinks.map((link, idx) => (
+              <ShortedLink {...link} idx={idx} key={uuid()} onCopy={handleCopyLink} />
+            ))}
+          </Stack>
+        </Stack>
+      </div>
     </Stack>
   );
 };

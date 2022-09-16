@@ -3,13 +3,16 @@ import { IconFacebook, IconInstagram, IconPinterest, IconTwitter } from 'assets/
 import { Row } from 'theme/restyled';
 
 const useStyles = createStyles((t) => ({
+  wrapper: {
+    backgroundColor: t.colors.violet[2],
+    color: t.white,
+    alignItems: 'center',
+  },
   container: {
     gap: `${2 * t.spacing.xl}px`,
     padding: `${3 * t.spacing.xl}px`,
-    alignItems: 'center',
-    backgroundColor: t.colors.violet[2],
-    color: t.white,
     textAlign: 'center',
+    alignItems: 'center',
 
     [t.fn.largerThan('md')]: {},
 
@@ -57,18 +60,21 @@ const Footer = () => {
   const { classes } = useStyles();
 
   return (
-    <Stack className={classes.container}>
-      {/* <img src="/mobile-design.jpg" alt="" /> */}
-      <Title>Shortly</Title>
-      <Block title="Features" elements={['Link Shorting', 'BrandedLinks', 'Analytics']} />
-      <Block title="Resources" elements={['Blog', 'Developers', 'Support']} />
-      <Block title="Company" elements={['About', 'Our Team', 'Careers', 'Contact']} />
-      <Row>
-        <IconFacebook />
-        <IconInstagram />
-        <IconPinterest />
-        <IconTwitter />
-      </Row>
+    <Stack className={classes.wrapper}>
+      <div className="wrapper">
+        <Stack className={classes.container}>
+          <Title>Shortly</Title>
+          <Block title="Features" elements={['Link Shorting', 'BrandedLinks', 'Analytics']} />
+          <Block title="Resources" elements={['Blog', 'Developers', 'Support']} />
+          <Block title="Company" elements={['About', 'Our Team', 'Careers', 'Contact']} />
+          <Row>
+            <IconFacebook />
+            <IconInstagram />
+            <IconPinterest />
+            <IconTwitter />
+          </Row>
+        </Stack>
+      </div>
     </Stack>
   );
 };
