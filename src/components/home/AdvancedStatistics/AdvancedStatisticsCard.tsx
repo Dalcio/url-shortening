@@ -38,7 +38,7 @@ const AdvancedStatisticsCard = ({ title, description }: AdvancedStatisticsProps)
   const { classes } = useStyles();
 
   return (
-    <Stack className={classes.container}>
+    <Stack className={`${classes.container} card`}>
       <Stack className={classes.icon}>
         <Image
           src={`/images/icon-${title.toLowerCase().replaceAll(' ', '-')}.svg`}

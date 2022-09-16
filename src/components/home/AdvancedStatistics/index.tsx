@@ -23,10 +23,26 @@ const useStyles = createStyles((theme) => ({
       top: '10px',
       bottom: '10px',
       backgroundColor: theme.colors.cyan[0],
-      [theme.fn.largerThan('md')]: {
+    },
+    [theme.fn.largerThan('sm')]: {
+      flexDirection: 'row',
+      marginTop: 0,
+      alignItems: 'start',
+
+      '& > div:nth-of-type(2)': {
+        marginTop: '90px',
+      },
+      '& > div:last-of-type': {
+        marginTop: '140px',
+      },
+
+      '&:before': {
         width: 'unset',
         height: '10px',
-        top: 'calc(50% - 5ox)',
+        marginTop: 'calc(25% - 5px)',
+        'margin-top': 'calc(25% - 5px)',
+        bottom: 'unset',
+        top: 'unset',
         left: '10px',
         right: '10px',
       },
