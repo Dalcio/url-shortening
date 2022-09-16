@@ -43,6 +43,10 @@ const useStyles = createStyles((theme) => ({
         },
       },
     },
+    [theme.fn.largerThan('sm')]: {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
   },
   errorInput: {
     borderColor: theme.colors.red[0],

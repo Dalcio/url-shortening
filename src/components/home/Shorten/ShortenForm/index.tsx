@@ -17,7 +17,7 @@ const ShortenForm = () => {
       <div className="wrapper">
         <Stack align="center">
           <Stack className={classes.container}>
-            <Stack>
+            <Stack style={{ flexGrow: 1 }}>
               <Input
                 variant="filled"
                 size="xl"
@@ -30,7 +30,13 @@ const ShortenForm = () => {
               {error && <Text className={classes.errorText}>{error}</Text>}
             </Stack>
 
-            <Button label="Shorten It!" radius="md" onCLick={onShortenIt} loading={isShorting} />
+            <Button
+              label="Shorten It!"
+              radius="md"
+              onCLick={onShortenIt}
+              loading={isShorting}
+              size="xl"
+            />
             <picture>
               <source
                 media={`(min-width: ${breakpoints.sm}px)`}
