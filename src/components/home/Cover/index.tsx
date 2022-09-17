@@ -1,47 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import { createStyles, Stack, Text, Title } from '@mantine/core';
+import { Stack, Text, Title } from '@mantine/core';
 import Button from 'components/Button';
-
-const useStyles = createStyles((theme) => ({
-  wrapper: {
-    position: 'relative',
-    overflowX: 'hidden',
-    overflowY: 'auto',
-    alignItems: 'center',
-    marginTop: '100px',
-    backgroundColor: theme.white,
-  },
-  container: {
-    minHeight: '100vh',
-    display: 'flex',
-  },
-  illustration: {
-    position: 'absolute',
-    right: '-210px',
-    top: '0px',
-    height: '448px',
-    width: '680px',
-  },
-  title: {
-    fontSize: '3rem',
-    fontWeight: 700,
-  },
-  content: {
-    position: 'relative',
-    zIndex: 1,
-    textAlign: 'center',
-    alignItems: 'center',
-    marginTop: `${438 + theme.spacing.xl}px`,
-    padding: `${2 * theme.spacing.xl}px ${theme.spacing.xl}px`,
-    '.description': {
-      color: theme.colors.gray[0],
-      fontWeight: 500,
-    },
-  },
-}));
+import useCoverStyles from './Cover.styles';
 
 const Cover = () => {
-  const { classes } = useStyles();
+  const { classes } = useCoverStyles();
 
   return (
     <Stack className={classes.wrapper}>
