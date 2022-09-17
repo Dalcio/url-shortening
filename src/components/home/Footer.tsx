@@ -14,7 +14,22 @@ const useStyles = createStyles((t) => ({
     textAlign: 'center',
     alignItems: 'center',
 
-    [t.fn.largerThan('md')]: {},
+    [t.fn.largerThan('xs')]: {
+      display: 'grid',
+      gridTemplateColumns: '0.7fr auto auto',
+      gridTemplateRows: 'auto auto',
+      alignItems: 'start',
+      justifyItems: 'start',
+      textAlign: 'left',
+
+      '.title': {
+        gridRow: '1 / -1',
+      },
+    },
+    [t.fn.largerThan('sm')]: {
+      gridTemplateColumns: '0.7fr repeat(4, auto)',
+      gridTemplateRows: 'auto',
+    },
 
     'svg:hover': {
       cursor: 'pointer',
@@ -63,7 +78,7 @@ const Footer = () => {
     <Stack className={classes.wrapper}>
       <div className="wrapper">
         <Stack className={classes.container}>
-          <Title>Shortly</Title>
+          <Title className="title">Shortly</Title>
           <Block title="Features" elements={['Link Shorting', 'BrandedLinks', 'Analytics']} />
           <Block title="Resources" elements={['Blog', 'Developers', 'Support']} />
           <Block title="Company" elements={['About', 'Our Team', 'Careers', 'Contact']} />
