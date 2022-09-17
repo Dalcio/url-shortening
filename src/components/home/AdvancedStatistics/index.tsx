@@ -1,62 +1,9 @@
-import { createStyles, Stack, Text, Title } from '@mantine/core';
+import { Stack, Text, Title } from '@mantine/core';
+import useAdvancedStatisticsStyles from './AdvancedStatistics.styles';
 import AdvancedStatisticsCard from './AdvancedStatisticsCard';
 
-const useStyles = createStyles((theme) => ({
-  wrapper: {
-    backgroundColor: theme.colors.gray[1],
-    alignItems: 'center',
-  },
-  container: {
-    alignItems: 'center',
-    padding: `${3 * theme.spacing.xl}px ${theme.spacing.xl}px`,
-  },
-  statistics: {
-    alignItems: 'center',
-    marginTop: `${2 * theme.spacing.md}px`,
-    gap: `${2 * theme.spacing.xl}px`,
-    position: 'relative',
-    '&:before': {
-      content: '""',
-      position: 'absolute',
-      width: '10px',
-      left: 'calc(50% - 5ox)',
-      top: '10px',
-      bottom: '10px',
-      backgroundColor: theme.colors.cyan[0],
-    },
-    [theme.fn.largerThan('sm')]: {
-      flexDirection: 'row',
-      marginTop: 0,
-      alignItems: 'start',
-
-      '& > div:nth-of-type(2)': {
-        marginTop: '90px',
-      },
-      '& > div:last-of-type': {
-        marginTop: '140px',
-      },
-
-      '&:before': {
-        width: 'unset',
-        height: '10px',
-        marginTop: 'calc(25% - 5px)',
-        'margin-top': 'calc(25% - 5px)',
-        bottom: 'unset',
-        top: 'unset',
-        left: '10px',
-        right: '10px',
-      },
-    },
-  },
-  description: {
-    textAlign: 'center',
-    color: theme.colors.gray[0],
-    fontWeight: 500,
-  },
-}));
-
 const AdvancedStatistics = () => {
-  const { classes } = useStyles();
+  const { classes } = useAdvancedStatisticsStyles();
 
   return (
     <Stack className={classes.wrapper}>
