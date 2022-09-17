@@ -37,7 +37,7 @@ const useHeaderStyles = (hide: boolean) =>
       position: 'static',
       flexDirection: 'row',
       alignItems: 'center',
-      width: '100%',
+      flexGrow: 1,
       justifyContent: 'space-between',
       paddingLeft: `${theme.spacing.xl}px`,
 
@@ -56,7 +56,6 @@ const useHeaderStyles = (hide: boolean) =>
         flexDirection: 'column',
         display: (hide && 'flex') || 'none',
         position: 'absolute',
-        width: 'unset',
         backgroundColor: theme.colors.violet[0],
         borderRadius: `${theme.radius.md}px`,
         right: `${theme.spacing.xl}px`,

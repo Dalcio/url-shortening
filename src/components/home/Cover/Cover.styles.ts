@@ -11,10 +11,13 @@ const useCoverStyles = createStyles((theme) => ({
 
     [theme.fn.largerThan('sm')]: {
       padding: '100px 0',
+      paddingLeft: `${theme.spacing.xl}px`,
+    },
+    [theme.fn.largerThan(1280)]: {
+      paddingLeft: 0,
     },
   },
   container: {
-    // minHeight: '100vh',
     display: 'flex',
 
     [theme.fn.largerThan('sm')]: {
